@@ -1,1 +1,1 @@
-# negihbourly-coding-challenge
+# neighbourly-coding-challenge
