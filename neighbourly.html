@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		
+		<link rel="stylesheet" href="main.css">
+
+		<title>Neighbourly Challenge</title>
+
+	</head>
+
+	<body>
+
+		<nav>
+			<h1>Neighbourly Coding Challenge</h1>
+		</nav>
+
+		<main>
+			<div class="signIn">
+				<img src= "assets/franz_bg.jfif" alt="logo" />
+				<h1>Sign in</h1>
+				<form>
+					<input type="text" placeholder="E-mail" id="email">
+					<input type="password" placeholder="Password" id="password">
+					<input type="submit" id="submit-btn" onclick="signIn()">
+				</form>
+				<p>No account yet? <button id="sign-up-btn">Sign up!</button></p> <!--make into a model-->
+			</div>
+			<div class="landing">
+				<img src= "assets/radoslav-bali-gOwIy3HPa1s-unsplash.jpg" alt="Landing photo" />
+			</div>
+
+			<div class="modal">
+				<h1>Sign up!</h1>
+				<form>
+					<input type="text" placeholder="First Name" id="firstName" onkeyup="checkName()">
+					<input type="text" placeholder="Last Name" id="lastName">
+					<input type="text" placeholder="E-mail" id="email">
+					<input type="password" placeholder="Password" id="password">
+					<input type="password" placeholder="Confirm Password" id="confirm">
+				</form>
+			</div>
+
+		</main>
+	
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-analytics.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyA4194avPPGtojezlTfKgLhLfi9zuisF8g",
+			authDomain: "neighbourly-challenge.firebaseapp.com",
+			databaseURL: "https://neighbourly-challenge.firebaseio.com",
+			projectId: "neighbourly-challenge",
+			storageBucket: "neighbourly-challenge.appspot.com",
+			messagingSenderId: "364052322443",
+			appId: "1:364052322443:web:e79aa892d8a8a1c3c11c8e",
+			measurementId: "G-WZJJN8XB80"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+	<script src="auth.js"></script>
+	</body>
+
+</html>
